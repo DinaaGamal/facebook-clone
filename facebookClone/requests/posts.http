@@ -1,0 +1,66 @@
+## get all posts
+GET http://localhost:8000/api/posts
+Content-Type: application/json
+
+###
+
+## create a new post
+POST http://localhost:8000/api/posts/user/5d08ad449e784a2cf83f33fd
+Content-Type: application/json
+    Authorization:Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJuYW1lIjoiaXNsYSIsImF2YXRhciI6Ii8vd3d3LmdyYXZhdGFyLmNvbS9hdmF0YXIvZjVkNDgzM2IzMWZiYTRlMTVmNjIwYjI2NmUzNWFlODU_cz0yMDAmcj1wZyZkPW1tIiwiZW1haWwiOiJpc2xhbUBjb2RlcnNlLmNvbSIsImlkIjoiNWQwOGFkNDQ5ZTc4NGEyY2Y4M2YzM2ZkIiwiaWF0IjoxNTYwODQ5NzMyfQ.wbK0ZQr44pRjjkjd29uZSnKHnNFUC6IUMmGiuhuebKc
+
+    {
+        "name":"isla",
+        "text": "DELETE MELorem ipsum dolor sit amet consectetur adipisicing elit. Deleniti consectetur itaque voluptatum aperiam vitae non, porro explicabo laboriosam! Excepturi, voluptatibus.",
+        "avatar":"//www.gravatar.com/avatar/f5d4833b31fba4e15f620b266e35ae85?s=200&r=pg&d=mm"
+    }
+
+###
+
+## edit a post
+
+PATCH http://localhost:8000/api/posts/5d0cebd13a71852b309b2598/user/5d08ad449e784a2cf83f33fd
+Content-Type: application/json
+    Authorization:Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJuYW1lIjoiaXNsYSIsImF2YXRhciI6Ii8vd3d3LmdyYXZhdGFyLmNvbS9hdmF0YXIvZjVkNDgzM2IzMWZiYTRlMTVmNjIwYjI2NmUzNWFlODU_cz0yMDAmcj1wZyZkPW1tIiwiZW1haWwiOiJpc2xhbUBjb2RlcnNlLmNvbSIsImlkIjoiNWQwOGFkNDQ5ZTc4NGEyY2Y4M2YzM2ZkIiwiaWF0IjoxNTYwODQ5NzMyfQ.wbK0ZQr44pRjjkjd29uZSnKHnNFUC6IUMmGiuhuebKc
+
+    {
+        "text": "YOU'VE BEEN EDITED final31"
+    }
+
+###  
+
+## delete a post
+DELETE http://localhost:8000/api/posts/5d0cdcda0b16e621d0b90520/user/5d08ad449e784a2cf83f33fd
+Content-Type: application/json
+    Authorization:Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJuYW1lIjoiaXNsYSIsImF2YXRhciI6Ii8vd3d3LmdyYXZhdGFyLmNvbS9hdmF0YXIvZjVkNDgzM2IzMWZiYTRlMTVmNjIwYjI2NmUzNWFlODU_cz0yMDAmcj1wZyZkPW1tIiwiZW1haWwiOiJpc2xhbUBjb2RlcnNlLmNvbSIsImlkIjoiNWQwOGFkNDQ5ZTc4NGEyY2Y4M2YzM2ZkIiwiaWF0IjoxNTYwODQ5NzMyfQ.wbK0ZQr44pRjjkjd29uZSnKHnNFUC6IUMmGiuhuebKc
+
+
+###
+## like/unlike - user one
+PUT http://localhost:8000/api/posts/5d0cebd13a71852b309b2598/like
+Content-Type: application/json
+    Authorization:Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJuYW1lIjoiaXNsYSIsImF2YXRhciI6Ii8vd3d3LmdyYXZhdGFyLmNvbS9hdmF0YXIvZjVkNDgzM2IzMWZiYTRlMTVmNjIwYjI2NmUzNWFlODU_cz0yMDAmcj1wZyZkPW1tIiwiZW1haWwiOiJpc2xhbUBjb2RlcnNlLmNvbSIsImlkIjoiNWQwOGFkNDQ5ZTc4NGEyY2Y4M2YzM2ZkIiwiaWF0IjoxNTYwODQ5NzMyfQ.wbK0ZQr44pRjjkjd29uZSnKHnNFUC6IUMmGiuhuebKc
+
+###
+
+## like/unlike - test user
+PUT http://localhost:8000/api/posts/5d0cebd13a71852b309b2598/like
+Content-Type: application/json
+    Authorization:Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJuYW1lIjoidGVzdCIsImF2YXRhciI6Ii8vd3d3LmdyYXZhdGFyLmNvbS9hdmF0YXIvYjY0MmI0MjE3YjM0YjFlOGQzYmQ5MTVmYzY1YzQ0NTI_cz0yMDAmcj1wZyZkPW1tIiwiZW1haWwiOiJ0ZXN0QHRlc3QuY29tIiwiaWQiOiI1ZDBjZmQ1MzIzNTRlMzA3ZTQ0YzE0NzQiLCJpYXQiOjE1NjExMzIzNzF9.lp_F6QYBXJHjWPZqTXdfcOxrln4DhkigoVpmuRK_Bj8
+
+###
+
+POST http://localhost:8000/api/posts/5d0cebd13a71852b309b2598/comment
+Content-Type: application/json
+    Authorization:Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJuYW1lIjoidGVzdCIsImF2YXRhciI6Ii8vd3d3LmdyYXZhdGFyLmNvbS9hdmF0YXIvYjY0MmI0MjE3YjM0YjFlOGQzYmQ5MTVmYzY1YzQ0NTI_cz0yMDAmcj1wZyZkPW1tIiwiZW1haWwiOiJ0ZXN0QHRlc3QuY29tIiwiaWQiOiI1ZDBjZmQ1MzIzNTRlMzA3ZTQ0YzE0NzQiLCJpYXQiOjE1NjExMzIzNzF9.lp_F6QYBXJHjWPZqTXdfcOxrln4DhkigoVpmuRK_Bj8
+
+    {
+        "text": "this is another comment"
+    }
+
+###  
+
+## delete a comment
+DELETE http://localhost:8000/api/posts/5d0cebd13a71852b309b2598/comment/5d0d0193895c5330dcaad030/user/5d08ad449e784a2cf83f33fd
+Content-Type: application/json
+    Authorization:Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJuYW1lIjoiaXNsYSIsImF2YXRhciI6Ii8vd3d3LmdyYXZhdGFyLmNvbS9hdmF0YXIvZjVkNDgzM2IzMWZiYTRlMTVmNjIwYjI2NmUzNWFlODU_cz0yMDAmcj1wZyZkPW1tIiwiZW1haWwiOiJpc2xhbUBjb2RlcnNlLmNvbSIsImlkIjoiNWQwOGFkNDQ5ZTc4NGEyY2Y4M2YzM2ZkIiwiaWF0IjoxNTYwODQ5NzMyfQ.wbK0ZQr44pRjjkjd29uZSnKHnNFUC6IUMmGiuhuebKc

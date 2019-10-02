@@ -1,0 +1,94 @@
+## get current user profile
+GET http://localhost:8000/api/profiles/me
+Content-Type: application/json
+    Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJuYW1lIjoiaXNsYSIsImF2YXRhciI6Ii8vd3d3LmdyYXZhdGFyLmNvbS9hdmF0YXIvZjVkNDgzM2IzMWZiYTRlMTVmNjIwYjI2NmUzNWFlODU_cz0yMDAmcj1wZyZkPW1tIiwiZW1haWwiOiJpc2xhbUBjb2RlcnNlLmNvbSIsImlkIjoiNWQwOGFkNDQ5ZTc4NGEyY2Y4M2YzM2ZkIiwiaWF0IjoxNTYwODQ5NzMyfQ.wbK0ZQr44pRjjkjd29uZSnKHnNFUC6IUMmGiuhuebKc
+
+###
+
+## create or update a profile
+POST http://localhost:8000/api/profiles
+Content-Type: application/json
+    Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJuYW1lIjoiaXNsYSIsImF2YXRhciI6Ii8vd3d3LmdyYXZhdGFyLmNvbS9hdmF0YXIvZjVkNDgzM2IzMWZiYTRlMTVmNjIwYjI2NmUzNWFlODU_cz0yMDAmcj1wZyZkPW1tIiwiZW1haWwiOiJpc2xhbUBjb2RlcnNlLmNvbSIsImlkIjoiNWQwOGFkNDQ5ZTc4NGEyY2Y4M2YzM2ZkIiwiaWF0IjoxNTYwODQ5NzMyfQ.wbK0ZQr44pRjjkjd29uZSnKHnNFUC6IUMmGiuhuebKc
+
+
+    {
+        "company": "Codersea",
+        "status": "Front-end developer",
+        "website": "www.codersea.com",
+        "skills": "React, Redux, Node",
+        "location":"PortSaid, Egypt",
+        "bio": "front-end engineer"
+    }
+
+###
+
+## get all profiles
+GET http://localhost:8000/api/profiles
+Content-Type: application/json
+
+###
+
+## get a user's profile by id
+GET http://localhost:8000/api/profiles/user/5d08ad449e784a2cf83f33fd
+Content-Type: application/json
+    Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJuYW1lIjoiaXNsYSIsImF2YXRhciI6Ii8vd3d3LmdyYXZhdGFyLmNvbS9hdmF0YXIvZjVkNDgzM2IzMWZiYTRlMTVmNjIwYjI2NmUzNWFlODU_cz0yMDAmcj1wZyZkPW1tIiwiZW1haWwiOiJpc2xhbUBjb2RlcnNlLmNvbSIsImlkIjoiNWQwOGFkNDQ5ZTc4NGEyY2Y4M2YzM2ZkIiwiaWF0IjoxNTYwODQ5NzMyfQ.wbK0ZQr44pRjjkjd29uZSnKHnNFUC6IUMmGiuhuebKc
+
+###
+
+## delete a users account
+DELETE http://localhost:8000/api/profiles/user/5d0a6a958b86d502fc2e095a
+Content-Type: application/json
+    Authorization:Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJuYW1lIjoidGVzdCIsImlkIjoiNWQwYTZhOTU4Yjg2ZDUwMmZjMmUwOTVhIiwiZW1haWwiOiJ0ZXN0QHRlc3QuY29tIiwiYXZhdGFyIjoiLy93d3cuZ3JhdmF0YXIuY29tL2F2YXRhci9iNjQyYjQyMTdiMzRiMWU4ZDNiZDkxNWZjNjVjNDQ1Mj9zPTIwMCZyPXBnJmQ9bW0iLCJpYXQiOjE1NjA5NjM3OTF9.nluuMwfJLN7icAd7R-C615xSj8wmpfJbWROhcSZ81uE
+
+###
+
+## add experience
+PUT http://localhost:8000/api/profiles/user/5d08ad449e784a2cf83f33fd/experience
+Content-Type: application/json
+    Authorization:Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJuYW1lIjoiaXNsYSIsImF2YXRhciI6Ii8vd3d3LmdyYXZhdGFyLmNvbS9hdmF0YXIvZjVkNDgzM2IzMWZiYTRlMTVmNjIwYjI2NmUzNWFlODU_cz0yMDAmcj1wZyZkPW1tIiwiZW1haWwiOiJpc2xhbUBjb2RlcnNlLmNvbSIsImlkIjoiNWQwOGFkNDQ5ZTc4NGEyY2Y4M2YzM2ZkIiwiaWF0IjoxNTYwODQ5NzMyfQ.wbK0ZQr44pRjjkjd29uZSnKHnNFUC6IUMmGiuhuebKc
+
+
+    {
+        "title":"frontend",
+        "company":"codersea",
+        "location":"portsaid",
+        "from":"2017",
+        "current":"true",
+        "description":"bestjobever?"
+    }
+
+###
+
+## delete experience by id
+DELETE http://localhost:8000/api/profiles/user/5d08ad449e784a2cf83f33fd/experience/5d0ba4981ad3803470667394
+Content-Type: application/json
+    Authorization:Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJuYW1lIjoiaXNsYSIsImF2YXRhciI6Ii8vd3d3LmdyYXZhdGFyLmNvbS9hdmF0YXIvZjVkNDgzM2IzMWZiYTRlMTVmNjIwYjI2NmUzNWFlODU_cz0yMDAmcj1wZyZkPW1tIiwiZW1haWwiOiJpc2xhbUBjb2RlcnNlLmNvbSIsImlkIjoiNWQwOGFkNDQ5ZTc4NGEyY2Y4M2YzM2ZkIiwiaWF0IjoxNTYwODQ5NzMyfQ.wbK0ZQr44pRjjkjd29uZSnKHnNFUC6IUMmGiuhuebKc
+
+###
+
+## add education
+PUT http://localhost:8000/api/profiles/user/5d08ad449e784a2cf83f33fd/education
+Content-Type: application/json
+    Authorization:Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJuYW1lIjoiaXNsYSIsImF2YXRhciI6Ii8vd3d3LmdyYXZhdGFyLmNvbS9hdmF0YXIvZjVkNDgzM2IzMWZiYTRlMTVmNjIwYjI2NmUzNWFlODU_cz0yMDAmcj1wZyZkPW1tIiwiZW1haWwiOiJpc2xhbUBjb2RlcnNlLmNvbSIsImlkIjoiNWQwOGFkNDQ5ZTc4NGEyY2Y4M2YzM2ZkIiwiaWF0IjoxNTYwODQ5NzMyfQ.wbK0ZQr44pRjjkjd29uZSnKHnNFUC6IUMmGiuhuebKc
+
+
+    {
+        "school":"elshorouk-academy",
+        "degree":"bachelor",
+        "fieldofstudy":"civil engineering",
+        "from":"2011",
+        "to":"2016",
+        "description":"civil engineer"
+    }
+
+###
+
+## delete education by id
+DELETE http://localhost:8000/api/profiles/user/5d08ad449e784a2cf83f33fd/education/5d0ba71411d37823e0e8395d
+Content-Type: application/json
+    Authorization:Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJuYW1lIjoiaXNsYSIsImF2YXRhciI6Ii8vd3d3LmdyYXZhdGFyLmNvbS9hdmF0YXIvZjVkNDgzM2IzMWZiYTRlMTVmNjIwYjI2NmUzNWFlODU_cz0yMDAmcj1wZyZkPW1tIiwiZW1haWwiOiJpc2xhbUBjb2RlcnNlLmNvbSIsImlkIjoiNWQwOGFkNDQ5ZTc4NGEyY2Y4M2YzM2ZkIiwiaWF0IjoxNTYwODQ5NzMyfQ.wbK0ZQr44pRjjkjd29uZSnKHnNFUC6IUMmGiuhuebKc
+
+###
+
+GET http://localhost:8000/api/profiles/github/IslamGamal88
+Content-Type: application/json

@@ -1,0 +1,14 @@
+## get the current user at any given time 
+GET http://localhost:8000/api/auth
+Content-Type: application/json
+    Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJuYW1lIjoiaXNsYSIsImF2YXRhciI6Ii8vd3d3LmdyYXZhdGFyLmNvbS9hdmF0YXIvZjVkNDgzM2IzMWZiYTRlMTVmNjIwYjI2NmUzNWFlODU_cz0yMDAmcj1wZyZkPW1tIiwiZW1haWwiOiJpc2xhbUBjb2RlcnNlLmNvbSIsImlkIjoiNWQwOGFkNDQ5ZTc4NGEyY2Y4M2YzM2ZkIiwiaWF0IjoxNTYwODQ5NzMyfQ.wbK0ZQr44pRjjkjd29uZSnKHnNFUC6IUMmGiuhuebKc
+
+
+###
+
+## login a user 
+POST http://localhost:8000/api/auth
+Content-Type: application/x-www-form-urlencoded
+
+email=islam@coderse.com
+&password=123456789

@@ -1,0 +1,8 @@
+POST http://localhost:8000/api/users
+Content-Type: application/x-www-form-urlencoded
+
+name=test
+&password=123456789
+&email=test@test.com
+
+
